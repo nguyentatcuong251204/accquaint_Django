@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+</head>
+<body>
+    <form role="form" action="/edit_save" method="POST">
+    {% csrf_token %}
+        <div>
+            <label >HỌ TÊN</label>
+            <input type="text" placeholder="NHẬP HỌ TÊN" name="name">
+        </div>
+        <div>
+            <label >GIỚI TÍNH</label>
+            <select name="gender" id="">
+                <option value="">NAM</option>
+                <option>NỮ</option>
+            </select>
+        </div>
+        <div>
+            <input type="hidden" name="id" value="{{id}}">
+            <!-- <input type="submit" value="LƯU"> -->
+        </div>
+        <!-- <input type="submit" value="LƯU"> -->
+        <div>
+            <button>LƯU</button>
+        </div>
+    </form>
+    <form action="/display"  method="post">
+        {% csrf_token %}
+        <button>THOÁT</button>
+    </form>
+</body>

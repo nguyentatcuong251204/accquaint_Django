@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>QUẢN LÍ SINH VIÊN</title>
+</head>
+<body>
+    <form role="form" action="/add_student_save" method="post">
+    {% csrf_token %}
+        <div>
+            <label >HỌ TÊN</label>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label >GIỚI TÍNH</label>
+            <select name="gender" >
+                <option value="">NAM</option>
+                <option>NỮ</option>
+            </select>
+        </div>
+        <div>
+            <button>LƯU</button>
+        </div>
+    </form>
+</body>
